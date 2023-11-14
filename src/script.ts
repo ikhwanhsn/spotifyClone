@@ -1,4 +1,4 @@
-const clientId = "f03cfd5b08fa455fb8bf00dc4e407928"; // Replace with your client id
+const clientId = import.meta.env.VITE_CLIENT_ID; // Replace with your client id
 const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
 
@@ -8,7 +8,6 @@ if (!code) {
     const accessToken = await getAccessToken(clientId, code);
     const profile = await fetchProfile(accessToken);
     populateUI(profile);
-    console.log(profile);
 }
 
 async function redirectToAuthCodeFlow(clientId: string) {

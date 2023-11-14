@@ -1,4 +1,3 @@
-// import './script'
 import './index.css'
 
 function App() {
