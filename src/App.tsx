@@ -1,13 +1,22 @@
+// import './script'
 import './index.css'
 
 function App() {
 
   return (
       <div className="mt-32 text-center">
-        <h1 className="text-3xl font-bold">
-          Template Vite (React + Typescript + Tailwind)
-        </h1>
-        <button className='px-5 py-2 mt-5 text-white bg-blue-500 rounded-full hover:bg-blue-600'>Check Version</button>
+        <h1>Display your Spotify profile data</h1>
+        <section id="profile">
+        <h2>Logged in as <span id="displayName"></span></h2>
+        <span id="avatar"></span>
+        <ul>
+            <li>User ID: <span id="id"></span></li>
+            <li>Email: <span id="email"></span></li>
+            <li>Spotify URI: <a id="uri" href="#"></a></li>
+            <li>Link: <a id="url" href="#"></a></li>
+            <li>Profile Image: <span id="imgUrl"></span></li>
+        </ul>
+        </section>
       </div>
   )
 }
